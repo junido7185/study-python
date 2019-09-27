@@ -152,4 +152,171 @@ SyntaxError: invalid syntax                           "=EOF       End OF mark
 Hello Python
 >>> # print('Hello Python')
 
-나중에 협업이나 그냥 수정 할때 주석을 써서 유용하게 사용하자!(팁:오류 났을 때 주석으로 처리해서 오류난데 찾기!)
+나중에 협업이나 그냥 수정 할때 주석을 써서 유용하게 사용하자!(팁:오류 났을 때 주석으로 처리해서 오류난데 찾기!) _2019/8/30_
+
+_2019/9/27_
+
+tip_ 8421? 이진수
+0001 ->1
+0010 ->2
+0011 ->3
+
+8421
+****
+1001 -> 9 <- 8+0+0+1
+
+함수!
+input : 값을 받아줌
+>>> x = input("첫번째 수:")
+첫번째 수:9
+>>> y = input("두번째 수:")
+두번째 수:16
+>>> print("합은", x+y)
+합은 916
+??-인풋은 문자로 받음 그래서!
+
+>>> x = int(input("첫번째 수:"))
+첫번째 수:9
+>>> y = int(input("첫번째 수:"))
+첫번째 수:16
+>>> print("합은", x+y)
+합은 25
+이러면 숫자로 받지~! (int도 함수! 얘가 문자를 숫자로!)
+
+>>> name = input("당신의 이름은?")
+당신의 이름은?동준
+>>> print("저는"+name+"입니다.")  -> print 안에서 + +기호로 문자랑 섞어서 쓸수 있다!
+저는동준입니다.
+
+>>> max(10,20)
+20
+>>> min(50, 30, 20, 40)
+20                                     tip 괄호 여는건 함수!
+
+>>> sqrt(4.0)
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    sqrt(4.0)
+NameError: name 'sqrt' is not defined           ?? 이건 임포트가 안되어 있거나 진짜 기능이 없는 것이다!
+
+>>> from math import*
+>>> sqrt(4.0)
+2.0
+
+문자열!~!~!
+문자열 연결하기 -> +
+-BTS가 UN연설에서 말했다
+-LOVE YOURSELF
+>>> print('BTS가 UN연설에서 말했다.'+'LOVE YOURSELF')
+BTS가 UN연설에서 말했다.LOVE YOURSELF
+
+>>> print('BTS멤버 수는'+7)
+Traceback (most recent call last):
+  File "<pyshell#16>", line 1, in <module>
+    print('BTS멤버 수는'+7)
+TypeError: can only concatenate str (not "int") to str
+  -문자랑 숫자 안 더해짐! string=문자
+그래서! str 쓰자
+>>> print('멤버수는'+ str(7))
+멤버수는7
+
+문자열 숫자로 변환
+>>> age = int("100")
+>>> height = float("168.7")
+
+문자열 길이 함수
+-len
+>>> len("student")
+7
+
+문자열 줄바꿈
+-BTS는
+-쵝오다!
+(\n \-이거 돈표시임)
+>>> print('BTS는 \n쵝오다!')
+BTS는 
+쵝오다!     (\-돈표시는 이스케이프문자!)
+
+문자열 특수문자 제외하기! ->r
+>>> print(r'C:\admin\download')
+C:\admin\download
+
+문자열 반복 -> OR= *
+>>> print("="*30)
+==============================
+>>> equal = "="*30
+>>> print(equal)
+==============================
+
+문자열의 고급 출력 -> %s
+>>> mem = 7
+>>> print("BTS는 %s명이다." %mem)
+BTS는 7명이다.         여기서! 파이썬은 %mem 앞에 , 안찍음
+
+>>> mem = 7
+>>> fan = 75
+>>> print("BTS는 %s명이고 팬은 %s억 명이다."%(mem, pan))
+BTS는 7명이고 팬은 75억 명이다.
+
+>>> sentence = "BTS는 %s명이고 팬은 %s억 명이다."
+>>> print(sentence %(mem, fan))
+BTS는 7명이고 팬은 75억 명이다.
+
+문자열 중 문자 하나 추출하기 -> []
+-BTS가 짱이야! (에서 s만!)
+>>> sent = "BTS가 짱이야!"
+>>> sent[2]
+'S'
+공백출력 해보까?
+>>> sent[4]
+' '
+>>> sent[10]
+Traceback (most recent call last):
+  File "<pyshell#3>", line 1, in <module>
+    sent[10]
+IndexError: string index out of range     - 인덱스 넘어가지 마라!
+  +파이썬은 문자하나만 못 바꿈
+
+문자열 조합해보기
+
+>>> first = input("첫번째 문자열을 입력하세요:")
+첫번째 문자열을 입력하세요:B
+>>> second = input("첫번째 문자열을 입력하세요:")
+첫번째 문자열을 입력하세요:T
+>>> third = input("첫번째 문자열을 입력하세요:")
+첫번째 문자열을 입력하세요:S
+>>> print(first+second+third)
+BTS
+
+>>> first = input("첫번째 문자열을 입력하세요:")
+첫번째 문자열을 입력하세요:Beyond
+>>> second = input("첫번째 문자열을 입력하세요:")
+첫번째 문자열을 입력하세요:Teacher
+>>> third = input("첫번째 문자열을 입력하세요:")
+첫번째 문자열을 입력하세요:Star
+>>> print(first[0]+second[0]+third[0])
+BTS
+
+인덱스!!
+
+>>> 오늘뭐먹지 = ['우삼겹', '계란찜', '쌈채소', '된장찌개']
+>>> 오늘뭐먹지
+['우삼겹', '계란찜', '쌈채소', '된장찌개']
+>>> 오늘뭐먹지[0]
+'우삼겹'
+>>> 오늘뭐먹지[3]
+'된장찌개'
+- 얘는 리스트 중 항목 하나만 변경가능
+>>> 오늘뭐먹지[1] = '계란말이'
+>>> 오늘뭐먹지[1]
+'계란말이'
+
+다양한 조건물들! - 맛보기!
+>>> value = 90
+>>> if(value >=80):
+	print("마스크를 쓰세요")
+else:
+	print("미세먼지 지수가 좋습니다")
+
+	
+마스크를 쓰세요
