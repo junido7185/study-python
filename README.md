@@ -396,3 +396,58 @@ elif score >= 50:
 else :
     print("F 입니다")
 
+이중 if문 사용!!
+rain = int(input('강수량을 입력하세요!'))
+
+if rain >0 :
+    if rain >=50:
+        print("우비 준비는 필수!")
+    else :
+        print("우산 챙기기!")
+else :
+    print("맘 편히~ 외출~!")
+
+
+논리연산자!!
+A and B
+A or B
+not A - 만약 연산자로 나온 값이 false가 나오면 not때문에 true값으로 나옴!
+
+num = int(input('정수를 입력하세요!'))
+
+if num >= 0 and num == 0:
+    print("이 수는 0입니다")
+elif num > 0:
+    print("이 수는 양수 입니다")
+else :
+    print("이 수는 음수 입니다")
+
+
+Finally!!!!  id랑 pw입력 받고 일치여부 확인 프로그램 만들기!
+
+users = ['choi','lee','kim']
+id = input('아이디를 입력하세요!')
+
+if id in users:
+    pw=input('비밀번호를 입력해주세용')
+    if pw == '1111':
+        print("사용자가 맞습니다")
+    else:
+        print("비밀번호가 틀렸습니다")
+else:
+    print("입력된 사용자가 아닙니다!!")
+    
+업그레이드 버전!!
+
+users = ['choi','lee','kim']
+pws = ['1111','2222','3333']
+
+id = input('아이디: ')
+if id in users:
+    pw=input('비밀번호: ')
+    if pw in pws :
+        print("사용자가 맞습니다")
+    else:
+        print("비밀번호가 틀렸습니다")
+else:
+    print("입력된 사용자가 아닙니다!!")
