@@ -320,3 +320,79 @@ else:
 
 	
 마스크를 쓰세요
+
+_2019-10-25_ 
+오늘!! 다양한 조건문들!
+
+: -> 은 아직 문장 안 끝났다는 거! 
+참고: 조건문을 쓸 때 들여쓰기 주의 하시오!!! 안그럼 에러뜹니다!
+조건문에 else없어도 사용가능!
+
+관계연산자 
+== 같은가?
+!= 다른가?
+>  큰가?
+<  작은가?
+>= 이상
+<= 이하
+
+그럼 TRUE VS FALSE ?
+>>> 1 == 1
+True
+>>> 1 != 2
+True
+>>> 1 >= 5
+False
+
+>>> 'Apple' == 'apple'
+False
+>>> 'Apple' == 'Apple'
+True
+>>> 1 == '1.0'
+False
+
+>>> val=10
+>>> val>=5
+True
+
+>>> score = 95
+>>> if score >= 90 :
+	print('뚜뚠 가수!!')
+
+	
+뚜뚠 가수!!
+----1---
+number = int(input('숫자를 입력하세요!'))
+num = number%2
+
+if num == 0:
+    print("짝수 입니다")
+else:
+    print("홀수입니다")
+----2---
+number = int(input('숫자를 입력하세요!'))
+
+if ((number %2)==0):
+    print("짝수 입니다")
+else:
+    print("홀수입니다")
+
+2번째께 메모리를 덜 씀..
+
+점수 등급표 만들어 보기!!
+
+score = int(input('점수를 입력하세요!'))
+
+if score >= 90:
+    print("A 입니다")
+elif score >= 80:
+    print("B 입니다")
+elif score >= 70:
+    print("C 입니다")
+elif score >= 60:
+    print("D 입니다")
+elif score >= 50:
+    print("E 입니다")
+else :
+    print("F 입니다")
+
