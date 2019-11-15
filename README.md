@@ -616,3 +616,102 @@ while i<10:
 5*8 = 40
 5*9 = 45
 
+----------break 와 continue-----------
+--break부터!!
+i = 0
+while i<10:
+    i = i + 1
+    if i == 5:
+        print("if문을 통해 break")
+        break
+    print(i)
+- F5 -
+1
+2
+3
+4
+if문을 통해 break
+
+--continue도!!
+i = 0
+while i<10:
+    i = i + 1
+    if i == 5:
+        print("if문을 통해 continue")
+        continue
+    print(i)
+
+-F5-
+1
+2
+3
+4
+if문을 통해 continue
+6
+7
+8
+9
+10
+
+반복문에서 빠져나간다--------break
+반복문에서 처음으로 올라감---continue
+
+
+그림 그리는 법!!!!!
+Turtle사용!
+
+import turtle
+
+t = turtle.Pen()
+for i in range(5):
+    t.forward(50)
+    t.right(144)
+    
+요고 하면 화살표가 그림그림!!
+
+파이썬 라이브러리 보깅 https://docs.python.org/3/library/turtle.html
+
+함수는 반복되는 내용 재활용! 코드의 가독성 높이기 위해 쓰임
+
+-------함수 만들기!!!
+
+def 함수이름 (매개변수1,매개변수2):
+    실행할 문장
+    실행할 문장
+    
+def greeting():
+    print("만나서 반가워")
+    print("나는 OO이야")
+    print("친하게 지내자")
+
+greeting()
+-F5-
+만나서 반가워
+나는 OO이야
+친하게 지내자
+
+--업그레이드!!
+def greeting(name):
+    print("만나서 반가워")
+    print("나는 %s이야"%name)
+    print("친하게 지내자")
+
+greeting("Jun")
+-F5-
+만나서 반가워
+나는 Jun이야
+친하게 지내자
+
+--업그레이드!!!
+def greeting(name,age):
+    print("만나서 반가워")
+    print("나는 %s이고"%name)
+    print("%d살이야!!!!"%age)
+    print("친하게 지내자")
+
+greeting("Jun",18)
+-F5-
+만나서 반가워
+나는 Jun이고
+18살이야!!!!
+친하게 지내자
